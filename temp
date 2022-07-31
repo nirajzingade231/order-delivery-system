@@ -1,0 +1,22 @@
+
+import sys
+import smtplib 
+
+# creates SMTP session 
+s = smtplib.SMTP('smtp.gmail.com', 587) 
+
+# start TLS for security 
+s.starttls() 
+
+# Authentication 
+s.login("lezendarysystem@gmail.com", "fuckusanskar") 
+
+# sending the mail 
+if k == "1":
+    s.sendmail("lezendarysystem@gmail.com", i ,"\nYour OTP is: "+ j) 
+else :
+    s.sendmail("lezendarysystem@gmail.com", i ,"\nYour new password is: "+ j) 
+
+
+# terminating the session 
+s.quit()
